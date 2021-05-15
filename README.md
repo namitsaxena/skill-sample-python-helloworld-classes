@@ -1,6 +1,23 @@
 Build an Alexa Hello World Skill in ASK Python SDK (using Classes)
 =========================================
 
+## Additional Notes
+
+### Deploying the code as a lambda
+* Setup: create virtual environment and package
+  * ./scripts/setup.sh
+  * ./scripts/package.sh
+    * note that only the actual classes get packaged, not everything in here
+* deploy the lambda
+  * ./scripts/deploy_new.sh
+    * the role specified should exists
+* test the lamdba
+  * ./scripts/test.sh
+    * the output will be written to output.txt
+    * it uses test_request1.json(hello intent) by default, change to test_request2.json (for cancel intent)
+    * the intent name should match one of the intents in the lambda (ex: ask_utils.is_intent_name("HelloWorldIntent"))
+
+=========================================
 This tutorial will walk first-time Alexa skills developers through all the 
 required steps involved in creating a skill using this hello world template, 
 called ‘hello world’. This post assumes you have some familiarity with 

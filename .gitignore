@@ -1,1 +1,5 @@
 skill_env/
+venv/
+**/.DS_Store
+output.txt
+skill.zip
